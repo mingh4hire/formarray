@@ -1,0 +1,26 @@
+<hello name="{{ name }}"></hello>
+
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <div formArrayName="arr" *ngFor="let a of myForm.get('arr').controls; let i = index">
+    <div [formGroupName]="i" style="margin-bottom: 10px;">
+      <label for="name">Name:</label>
+      <input type="text" name="name" formControlName="name">
+      <br><br>
+      <label for="pay">Pay:</label>
+      <input type="text" name="pay" formControlName="pay">
+    </div>
+  </div>
+  <br>
+  <div >
+    <div formArrayName="arr2" *ngFor="let i of myForm.get('arr2').controls; let j = index;">
+       <label>lname: </label><input name='lname' formControlName="lname"/>
+        <div>asfd</div>
+    </div>
+  </div>
+
+
+
+  <button type="button" (click)="addItem()" style="margin-right: 5px;">Add</button>
+  <button type="submit">Submit</button>
+</form>
