@@ -11,12 +11,25 @@
       <label for="pay">Pay:</label>
       <input type="text" name="pay" formControlName="pay">
     </div>
+    <div [formGroupName]="i" style="margin-bottom: 10px;">
+      <label for="name">Name:</label>
+      <input type="text" name="name" formControlName="name">
+      <br><br>
+      <label for="pay">Pay:</label>
+      <input type="text" name="pay" formControlName="pay">
+    </div>
+
+
   </div>
   <br>
   <div >
     <div formArrayName="arr2" *ngFor="let i of myForm.get('arr2').controls; let j = index;">
+
+          <div [formGroupName]="j" style="margin-bottom: 10px;">
+
        <label>lname: </label><input name='lname' formControlName="lname"/>
         <div>asfd</div>
+        </div>
     </div>
   </div>
 

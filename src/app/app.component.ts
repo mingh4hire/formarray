@@ -15,12 +15,17 @@ export class AppComponent  {
 
   ngOnInit() {
     this.myForm = this.fb.group({
+      cc: ['asdfa', Validators.required],
       arr: this.fb.array([this.createItem()]),
-      arr2: this.fb.array([
-        this.fb.group({lname:['asfd', Validators.required]}),
-        this.fb.group({lname:['bbb', Validators.required]}),
-        this.fb.group({lname:['',Validators.required]}),
-        this.fb.group({lname:['',Validators.required]})
+      arr2: this.fb.array(
+        [
+        this.fb.group(
+          {lname:['asfd', Validators.required]} ),
+        this.fb.group(
+          {lname:['asfasdf asdf adsd', Validators.required]} ),
+        // this.fb.group({lname:['bbb', Validators.required]}),
+        // this.fb.group({lname:['',Validators.required]}),
+        // this.fb.group({lname:['',Validators.required]})
 
       ]
       )
@@ -29,8 +34,8 @@ export class AppComponent  {
 
   createItem() {
     return this.fb.group({
-      name: [''],
-      pay: ['']
+      name: ['asfd'],
+      pay: ['3223']
     })
   }
 
