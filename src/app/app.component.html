@@ -1,5 +1,8 @@
 <hello name="{{ name }}"></hello>
-
+{{myForm}}
+{{myForm.valid}}
+{{myForm}}
+{{myForm}}
 
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
   <input formControlName="cc"/>
@@ -32,9 +35,7 @@
         </div>
     </div>
   </div>
-
-
-
   <button type="button" (click)="addItem()" style="margin-right: 5px;">Add</button>
   <button type="submit">Submit</button>
+  <button type="submit" [disabled]="!myForm.valid">submit</button>
 </form>

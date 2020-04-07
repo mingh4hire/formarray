@@ -32,6 +32,10 @@ export class AppComponent  {
     })
   }
 
+  onclick(){
+
+  }
+
   createItem() {
     return this.fb.group({
       name: ['asfd'],
@@ -43,6 +47,11 @@ export class AppComponent  {
     this.arr = this.myForm.get('arr') as FormArray;
     this.arr.push(this.createItem());
   }
+  addItem2() {
+    const formarr = this.myForm.get('arr2')  as FormArray;//= this.myForm.get('arr2') as FormArray;
+    this.arr.push(this.createItem());
+  }
+
 
   onSubmit() {
     console.log(this.myForm.value);
