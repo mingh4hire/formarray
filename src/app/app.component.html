@@ -2,6 +2,7 @@
 
 
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <input formControlName="cc"/>
   <div formArrayName="arr" *ngFor="let a of myForm.get('arr').controls; let i = index">
     <div [formGroupName]="i" style="margin-bottom: 10px;">
       <label for="name">Name:</label>
