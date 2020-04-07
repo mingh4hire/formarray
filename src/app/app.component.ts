@@ -49,7 +49,13 @@ export class AppComponent  {
   }
   addItem2() {
     const formarr = this.myForm.get('arr2')  as FormArray;//= this.myForm.get('arr2') as FormArray;
-    this.arr.push(this.createItem());
+     formarr.push(
+      this.fb.group({
+      lname: ['asfd', Validators.required]   ,
+      fname: [null, Validators.required]   
+    })
+
+    );
   }
 
 

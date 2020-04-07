@@ -32,10 +32,13 @@
 
        <label>lname: </label><input name='lname' formControlName="lname"/>
         <div>asfd</div>
+               <label>fname: </label><input name='fname' formControlName="fname"/>
+
         </div>
     </div>
   </div>
   <button type="button" (click)="addItem()" style="margin-right: 5px;">Add</button>
+  <button type="button" (click)="addItem2()" style="margin-right: 5px;">Add2</button>
   <button type="submit">Submit</button>
   <button type="submit" [disabled]="!myForm.valid">submit</button>
 </form>
