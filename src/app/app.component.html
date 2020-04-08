@@ -43,7 +43,7 @@
   <button type="submit" [disabled]="!myForm.valid">submit</button>
 
     <div formArrayName="arr3" *ngFor="let i of myForm.get('arr3').controls; let j = index;">
-
+j is {{j}}
           <div [formGroupName]="j" style="margin-bottom: 10px;">
 
                 <label>age: </label><input name='age' formControlName="age"/>
