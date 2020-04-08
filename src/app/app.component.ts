@@ -28,7 +28,12 @@ export class AppComponent  {
         // this.fb.group({lname:['',Validators.required]})
 
       ]
-      )
+      ),
+      arr3: this.fb.array([
+        this.fb.group({age:['23', Validators.required]}),
+        this.fb.group({age:[null, Validators.required]}),
+        this.fb.group({age:[null, Validators.required]}),
+      ])
     })
   }
 

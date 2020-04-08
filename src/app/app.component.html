@@ -41,4 +41,43 @@
   <button type="button" (click)="addItem2()" style="margin-right: 5px;">Add2</button>
   <button type="submit">Submit</button>
   <button type="submit" [disabled]="!myForm.valid">submit</button>
+
+    <div formArrayName="arr3" *ngFor="let i of myForm.get('arr3').controls; let j = index;">
+
+          <div [formGroupName]="j" style="margin-bottom: 10px;">
+
+                <label>age: </label><input name='age' formControlName="age"/>
+
+        </div>
+        </div>
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </form>
