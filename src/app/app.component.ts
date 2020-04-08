@@ -20,7 +20,10 @@ export class AppComponent  {
       arr2: this.fb.array(
         [
         this.fb.group(
-          {lname:['asfd', Validators.required]} ),
+          {lname:['asfd', Validators.required],
+          
+          fname:['asfd', Validators.required]
+          } ),
         this.fb.group(
           {lname:['asfasdf asdf adsd', Validators.required]} ),
         // this.fb.group({lname:['bbb', Validators.required]}),
